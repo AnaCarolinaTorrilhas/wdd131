@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #183044;
+    background-color: #f3f6f7;
+}
+
+header {
+    padding: 1.5rem;
+    color: #ffffff;
+    background-color: #183044;
+}
+
+header > p,
+main > p,
+footer > p {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 60rem;
+    margin: 1rem auto 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: #2f6575;
+}
+
+nav p {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    padding: 3rem 1.5rem;
+    background-color: #ffffff;
+}
+
+footer {
+    padding: 1.5rem;
+    color: #ffffff;
+    background-color: #183044;
+}
