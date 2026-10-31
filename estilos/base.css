@@ -1,0 +1,271 @@
+:root {
+    color-scheme: light;
+    --color-blue: #214f70;
+    --color-charcoal: #333333;
+    --color-text: #363636;
+    --color-border: #b7b7b7;
+    --font-body: "Roboto", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--color-text);
+    background: #ffffff;
+    font-family: var(--font-body);
+    line-height: 1.65;
+}
+
+.site-header {
+    padding: 0.7rem 1rem;
+    color: #ffffff;
+    background: var(--color-blue);
+    text-align: center;
+}
+
+#titulo-curso {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--color-charcoal);
+}
+
+nav a {
+    position: relative;
+    padding: 0.45rem 1rem;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    text-align: center;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #ffffff;
+    background: #4a4a4a;
+}
+
+nav a::after {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.25rem;
+    left: 1rem;
+    height: 2px;
+    background: #9dc9e7;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 180ms ease;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+main {
+    width: min(100% - 2rem, 60rem);
+    margin: 0 auto;
+    padding: 1.5rem 0 1rem;
+    flex: 1;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.1rem);
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr);
+    gap: 0.5rem;
+}
+
+.card {
+    overflow: hidden;
+    align-self: stretch;
+    border: 1px solid var(--color-border);
+    border-radius: 0.55rem;
+    background: #ffffff;
+}
+
+.card > h2 {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background: var(--color-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.about-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.about-intro p,
+.country-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.portrait {
+    width: 5rem;
+    flex: 0 0 5rem;
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--color-border);
+    object-fit: cover;
+}
+
+.about-card h3 {
+    width: 65%;
+    margin: 0.6rem 0 1rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+.country-info {
+    display: grid;
+    grid-template-columns: minmax(7rem, 0.8fr) 1.2fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.country-info figure {
+    margin: 0;
+    text-align: center;
+}
+
+.country-info figure img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--color-border);
+}
+
+.country-info figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.resources-card .card-content {
+    display: flex;
+    min-height: 22rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resources-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.resources-card a {
+    color: #0645ad;
+    text-underline-offset: 0.15em;
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+    color: var(--color-blue);
+}
+
+.resource-illustration {
+    width: 6rem;
+    height: 4rem;
+    align-self: center;
+    margin-top: 1.25rem;
+    object-fit: contain;
+}
+
+footer {
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    background: var(--color-blue);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.1rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+}
+
+#ultimaModificacao {
+    color: #ffeb00;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 38rem) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 40%;
+        padding: 0.5rem;
+    }
+
+    main {
+        width: min(100% - 1.25rem, 34rem);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .resources-card .card-content {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 25rem) {
+    .about-intro {
+        flex-direction: column-reverse;
+    }
+
+    .portrait {
+        width: 7rem;
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .country-info {
+        grid-template-columns: 1fr;
+    }
+
+    .country-info figure {
+        width: min(100%, 12rem);
+        justify-self: center;
+    }
+}

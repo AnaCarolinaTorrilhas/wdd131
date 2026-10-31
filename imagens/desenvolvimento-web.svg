@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title description">
+    <title id="title">Desenvolvimento web</title>
+    <desc id="description">Janela de código estilizada com elementos de HTML e CSS.</desc>
+    <rect width="800" height="450" fill="#e8f0ed"/>
+    <circle cx="400" cy="225" r="165" fill="#d4e5df"/>
+    <rect x="177" y="115" width="446" height="250" rx="18" fill="#164e56"/>
+    <path d="M177 133a18 18 0 0 1 18-18h410a18 18 0 0 1 18 18v34H177z" fill="#1e6870"/>
+    <circle cx="205" cy="141" r="7" fill="#f3c768"/>
+    <circle cx="230" cy="141" r="7" fill="#f08c76"/>
+    <circle cx="255" cy="141" r="7" fill="#b5d8c8"/>
+    <path d="m285 220-34 25 34 25m230-50 34 25-34 25m-74-77-36 104" fill="none" stroke="#f3c768" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+    <path d="M293 310h124" stroke="#b5d8c8" stroke-linecap="round" stroke-width="8"/>
+    <path d="M443 310h65" stroke="#f08c76" stroke-linecap="round" stroke-width="8"/>
+</svg>
