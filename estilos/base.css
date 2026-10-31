@@ -24,7 +24,7 @@ body {
 }
 
 .site-header {
-    padding: 0.7rem 1rem;
+    padding: 0;
     color: #ffffff;
     background: var(--color-blue);
     text-align: center;
@@ -32,6 +32,7 @@ body {
 
 #titulo-curso {
     display: block;
+    padding: 0.7rem 1rem;
     font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 400;
@@ -40,6 +41,7 @@ body {
 nav {
     display: flex;
     justify-content: space-evenly;
+    color: #ffffff;
     background: var(--color-charcoal);
 }
 
