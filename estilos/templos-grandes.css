@@ -1,53 +1,29 @@
-.site-header {
-    flex-wrap: wrap;
-    padding: 0.65rem max(1.5rem, calc((100% - 76rem) / 2));
-}
-
-.site-title {
-    font-size: 2rem;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-nav {
-    position: static;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-left: 1.5rem;
-    background: transparent;
-}
-
-nav a {
-    padding: 0.7rem 0.8rem;
-}
-
-main {
-    width: min(100% - 3rem, 76rem);
-    padding-top: 2.25rem;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-.intro {
-    margin-bottom: 2rem;
-}
-
-.gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-}
-
-figure {
-    transition: transform 180ms ease, box-shadow 180ms ease;
+body.gallery-page {
+    --header-wrap: wrap;
+    --header-padding: 0.65rem max(1.5rem, calc((100% - 76rem) / 2));
+    --title-size: 2rem;
+    --menu-toggle-display: none;
+    --nav-position: static;
+    --nav-top: auto;
+    --nav-right: auto;
+    --nav-left: auto;
+    --nav-display: flex;
+    --nav-flex: 1;
+    --nav-direction: row;
+    --nav-justify: flex-end;
+    --nav-margin-left: 1.5rem;
+    --nav-background: transparent;
+    --nav-link-padding: 0.7rem 0.8rem;
+    --main-width: min(100% - 3rem, 76rem);
+    --main-padding: 2.25rem 0 2.5rem;
+    --heading-size: 2.5rem;
+    --intro-margin: 0.4rem 0 2rem;
+    --gallery-columns: repeat(3, minmax(0, 1fr));
+    --gallery-gap: 1.5rem;
+    --figure-transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 figure:hover {
     transform: translateY(-0.2rem);
-    box-shadow: 0 0.45rem 1rem rgb(49 9 79 / 18%);
+    box-shadow: var(--shadow-card-hover);
 }

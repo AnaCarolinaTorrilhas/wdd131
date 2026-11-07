@@ -4,6 +4,13 @@
     --color-purple-dark: #31094f;
     --color-text: #29232f;
     --color-surface: #f4eff7;
+    --color-white: #ffffff;
+    --color-focus: #f5d875;
+    --color-link-hover: #56217d;
+    --color-intro: #5f5665;
+    --color-image-background: #e5dfea;
+    --shadow-card: 0 0.2rem 0.75rem #31094f1f;
+    --shadow-card-hover: 0 0.45rem 1rem #31094f2e;
     --font-body: "Roboto", sans-serif;
     --font-heading: "Poppins", sans-serif;
 }
@@ -22,7 +29,7 @@ body {
     flex-direction: column;
     margin: 0;
     color: var(--color-text);
-    background: #ffffff;
+    background: var(--color-white);
     font-family: var(--font-body);
     line-height: 1.6;
 }
@@ -33,21 +40,22 @@ body {
     min-height: 5rem;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
-    color: #ffffff;
+    padding: var(--header-padding, 0.75rem 1rem);
+    color: var(--color-white);
     background: var(--color-purple);
+    flex-wrap: var(--header-wrap, nowrap);
 }
 
 .site-title {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: clamp(1.35rem, 6vw, 2rem);
+    font-size: var(--title-size, clamp(1.35rem, 6vw, 2rem));
     font-weight: 600;
     text-decoration: none;
 }
 
 .menu-toggle {
-    display: grid;
+    display: var(--menu-toggle-display, grid);
     width: 2.75rem;
     height: 2.75rem;
     align-content: center;
@@ -62,33 +70,36 @@ body {
 .menu-toggle span {
     display: block;
     height: 3px;
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .menu-toggle:focus-visible,
 .site-header a:focus-visible {
-    outline: 3px solid #f5d875;
+    outline: 3px solid var(--color-focus);
     outline-offset: 3px;
 }
 
 nav {
-    position: absolute;
+    position: var(--nav-position, absolute);
     z-index: 1;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    background: var(--color-purple-dark);
+    top: var(--nav-top, 100%);
+    right: var(--nav-right, 0);
+    left: var(--nav-left, 0);
+    display: var(--nav-display, none);
+    flex: var(--nav-flex, initial);
+    flex-direction: var(--nav-direction, column);
+    justify-content: var(--nav-justify, normal);
+    margin-left: var(--nav-margin-left, 0);
+    background: var(--nav-background, var(--color-purple-dark));
 }
 
 nav.is-open {
-    display: flex;
+    display: var(--nav-open-display, flex);
 }
 
 nav a {
-    padding: 0.75rem 1rem;
-    color: #ffffff;
+    padding: var(--nav-link-padding, 0.75rem 1rem);
+    color: var(--color-white);
     font-family: var(--font-heading);
     text-align: center;
     text-decoration: none;
@@ -96,34 +107,34 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-    background: #56217d;
+    background: var(--color-link-hover);
 }
 
 main {
-    width: min(100% - 1.5rem, 34rem);
+    width: var(--main-width, min(100% - 1.5rem, 34rem));
     flex: 1;
     align-self: center;
-    padding: 1.75rem 0 2.5rem;
+    padding: var(--main-padding, 1.75rem 0 2.5rem);
 }
 
 h1 {
     margin: 0;
     font-family: var(--font-heading);
-    font-size: clamp(1.65rem, 7vw, 2.25rem);
+    font-size: var(--heading-size, clamp(1.65rem, 7vw, 2.25rem));
     font-weight: 600;
     text-align: center;
 }
 
 .intro {
-    margin: 0.4rem 0 1.5rem;
-    color: #5f5665;
+    margin: var(--intro-margin, 0.4rem 0 1.5rem);
+    color: var(--color-intro);
     text-align: center;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: var(--gallery-columns, 1fr);
+    gap: var(--gallery-gap, 1.25rem);
 }
 
 figure {
@@ -132,15 +143,16 @@ figure {
     overflow: hidden;
     border-radius: 0.5rem;
     background: var(--color-surface);
-    box-shadow: 0 0.2rem 0.75rem rgb(49 9 79 / 12%);
+    box-shadow: var(--shadow-card);
     scroll-margin-top: 1rem;
+    transition: var(--figure-transition, none);
 }
 
 figure img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
-    background: #e5dfea;
+    background: var(--color-image-background);
     object-fit: cover;
 }
 
@@ -155,7 +167,7 @@ figcaption {
 
 footer {
     padding: 0.85rem 1rem;
-    color: #ffffff;
+    color: var(--color-white);
     background: var(--color-purple);
     text-align: center;
 }
@@ -167,7 +179,7 @@ footer p {
 }
 
 #ultimaModificacao {
-    color: #f5d875;
+    color: var(--color-focus);
     font-size: 0.75rem;
 }
 
