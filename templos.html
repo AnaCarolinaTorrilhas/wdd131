@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Álbum de fotos do Templo de Campinas, São Paulo, Brasil.">
+    <meta name="author" content="Ana Carolina da Silva Torrilhas">
+    <title>Álbum do Templo | Ana Carolina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css" media="(min-width: 38rem)">
+    <script src="scripts/templos.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-title" href="#inicio">Álbum do Templo</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="menu-principal" aria-label="Navegação principal">
+            <a href="#inicio">Página Inicial</a>
+            <a href="#antigo">Antigo</a>
+            <a href="#novo">Novo</a>
+            <a href="#grande">Grande</a>
+            <a href="#pequeno">Pequeno</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <h1>Templo de Campinas, São Paulo, Brasil</h1>
+        <p class="intro">Uma coleção de vistas do templo em diferentes momentos do dia.</p>
+        <section class="gallery" aria-label="Galeria de fotos do Templo de Campinas, São Paulo, Brasil">
+            <figure id="antigo">
+                <img src="imagens/templo-sao-paulo-torre.png" alt="Torre e pináculo do Templo de Campinas contra o céu azul" width="713" height="951" fetchpriority="high">
+                <figcaption>Torre do templo sob a luz do dia</figcaption>
+            </figure>
+            <figure id="novo">
+                <img src="imagens/templo-sao-paulo-estacionamento.png" alt="Templo de Campinas visto por trás de árvores e carros estacionados" width="713" height="951" loading="lazy">
+                <figcaption>O templo visto da área de estacionamento</figcaption>
+            </figure>
+            <figure id="grande">
+                <img src="imagens/templo-sao-paulo-jardins.png" alt="Fachada do templo, jardins e palmeiras ao entardecer" width="713" height="951" loading="lazy">
+                <figcaption>Fachada e jardins no fim da tarde</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo-sao-paulo-noite.png" alt="Fachada iluminada do templo durante a noite" width="1024" height="768" loading="lazy">
+                <figcaption>As luzes do templo à noite</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo-sao-paulo-anoitecer.png" alt="Vista ampla do templo iluminado ao anoitecer" width="713" height="951" loading="lazy">
+                <figcaption>Uma vista ampla ao anoitecer</figcaption>
+            </figure>
+            <figure id="pequeno">
+                <img src="imagens/templo-sao-paulo-iluminado.png" alt="Detalhes das janelas e da iluminação do templo ao anoitecer" width="713" height="951" loading="lazy">
+                <figcaption>Detalhes da arquitetura iluminada</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo-sao-paulo-jardins.png" alt="Palmeiras e jardins diante da fachada do templo" width="713" height="951" loading="lazy">
+                <figcaption>Palmeiras emoldurando a fachada</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo-sao-paulo-noite.png" alt="Arcos e janelas da fachada iluminados à noite" width="1024" height="768" loading="lazy">
+                <figcaption>Arcos e janelas após o anoitecer</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo-sao-paulo-torre.png" alt="Vista de baixo para cima da torre do templo" width="713" height="951" loading="lazy">
+                <figcaption>O pináculo visto de perto</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="anoatual"></span> Ana Carolina da Silva Torrilhas · Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
