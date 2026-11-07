@@ -11,8 +11,8 @@
     --color-image-background: #e5dfea;
     --shadow-card: 0 0.2rem 0.75rem #31094f1f;
     --shadow-card-hover: 0 0.45rem 1rem #31094f2e;
-    --font-body: system-ui, sans-serif;
-    --font-heading: system-ui, sans-serif;
+    --font-body: "Roboto", sans-serif;
+    --font-heading: "Roboto", sans-serif;
 }
 
 * {
@@ -85,16 +85,22 @@ nav {
     top: var(--nav-top, 100%);
     right: var(--nav-right, 0);
     left: var(--nav-left, 0);
-    display: var(--nav-display, none);
+    display: flex;
     flex: var(--nav-flex, initial);
     flex-direction: var(--nav-direction, column);
     justify-content: var(--nav-justify, normal);
     margin-left: var(--nav-margin-left, 0);
     background: var(--nav-background, var(--color-purple-dark));
+    visibility: var(--nav-visibility, hidden);
+    opacity: var(--nav-opacity, 0);
+    pointer-events: var(--nav-pointer-events, none);
+    transition: opacity 180ms ease, visibility 180ms ease;
 }
 
 nav.is-open {
-    display: var(--nav-open-display, flex);
+    visibility: var(--nav-open-visibility, visible);
+    opacity: var(--nav-open-opacity, 1);
+    pointer-events: var(--nav-open-pointer-events, auto);
 }
 
 nav a {

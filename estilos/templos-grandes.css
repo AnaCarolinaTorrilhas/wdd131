@@ -7,7 +7,9 @@ body.gallery-page {
     --nav-top: auto;
     --nav-right: auto;
     --nav-left: auto;
-    --nav-display: flex;
+    --nav-visibility: visible;
+    --nav-opacity: 1;
+    --nav-pointer-events: auto;
     --nav-flex: 1;
     --nav-direction: row;
     --nav-justify: flex-end;
