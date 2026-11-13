@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça Campinas, uma cidade vibrante do interior de São Paulo, com áreas verdes, cultura e história.">
+    <meta name="author" content="Ana Carolina da Silva Torrilhas">
+    <title>Campinas, Brasil | Um lugar especial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <p class="eyebrow">São Paulo · Brasil</p>
+        <h1>Campinas</h1>
+        <p class="tagline">Uma cidade de encontros, natureza e movimento.</p>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Paisagem de Campinas">
+            <picture>
+                <source media="(max-width: 40rem)" srcset="imagens/campinas-torre.webp">
+                <source media="(min-width: 40.01rem)" srcset="imagens/campinas-crepusculo.webp">
+                <img
+                    class="hero-image"
+                    src="imagens/campinas-crepusculo.webp"
+                    srcset="imagens/campinas-crepusculo.webp"
+                    alt="Templo de Campinas com torre e jardins"
+                    fetchpriority="high">
+            </picture>
+            <div class="hero-caption">
+                <span>Interior de São Paulo</span>
+                <span class="caption-dot" aria-hidden="true"></span>
+                <span>Desde 1774</span>
+            </div>
+        </section>
+
+        <div class="information-grid">
+            <section class="info-panel data-panel" aria-labelledby="dados-titulo">
+                <h2 id="dados-titulo">Campinas em dados</h2>
+                <dl>
+                    <div class="data-row">
+                        <dt>País</dt>
+                        <dd>Brasil</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Estado</dt>
+                        <dd>São Paulo</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>População</dt>
+                        <dd>1,14 milhão <span>(Censo 2022)</span></dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Área</dt>
+                        <dd>794,6 km²</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Fundação</dt>
+                        <dd>14 de julho de 1774</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="info-panel weather-panel" aria-labelledby="clima-titulo">
+                <h2 id="clima-titulo">Clima</h2>
+                <img class="weather-icon" src="imagens/clima-parcialmente-nublado.svg" alt="" aria-hidden="true">
+                <dl>
+                    <div class="data-row">
+                        <dt>Condição</dt>
+                        <dd>Parcialmente nublado</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Temperatura</dt>
+                        <dd><span id="temperatura">8</span> °C</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Velocidade do vento</dt>
+                        <dd><span id="velocidade-vento">12</span> km/h</dd>
+                    </div>
+                    <div class="data-row">
+                        <dt>Sensação térmica</dt>
+                        <dd><span id="sensacao-termica" aria-live="polite">—</span></dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+        <section class="about-place" aria-labelledby="sobre-titulo">
+            <p class="eyebrow">Um pouco sobre a cidade</p>
+            <h2 id="sobre-titulo">Tradição e futuro lado a lado</h2>
+            <p>Campinas combina a energia de um importante polo de inovação com parques, cultura e uma história que atravessa séculos. Entre seus lugares marcantes estão a Lagoa do Taquaral, o Mercado Municipal e o distrito de Joaquim Egídio, conhecido por suas paisagens e trilhas.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="anoatual"></span> Ana Carolina da Silva Torrilhas · Campinas, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
