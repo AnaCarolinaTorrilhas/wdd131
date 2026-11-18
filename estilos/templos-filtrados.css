@@ -1,0 +1,205 @@
+:root {
+    color-scheme: light;
+    --color-purple: #43106b;
+    --color-purple-dark: #31094f;
+    --color-text: #29232f;
+    --color-surface: #f4eff7;
+    --color-white: #ffffff;
+    --color-focus: #f5d875;
+    --color-link-hover: #56217d;
+    --color-intro: #5f5665;
+    --color-image-background: #e5dfea;
+    --shadow-card: 0 0.2rem 0.75rem #31094f1f;
+    --shadow-card-hover: 0 0.45rem 1rem #31094f2e;
+    --font-body: "Roboto", sans-serif;
+    --font-heading: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.site-header {
+    position: relative;
+    display: flex;
+    min-height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-padding, 0.75rem 1rem);
+    color: var(--color-white);
+    background: var(--color-purple);
+    flex-wrap: var(--header-wrap, nowrap);
+}
+
+.site-title {
+    color: inherit;
+    font-family: var(--font-heading);
+    font-size: var(--title-size, clamp(1.35rem, 6vw, 2rem));
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: var(--menu-toggle-display, grid);
+    width: 2.75rem;
+    height: 2.75rem;
+    align-content: center;
+    gap: 0.35rem;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: var(--color-white);
+}
+
+.menu-toggle:focus-visible,
+.site-header a:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+nav {
+    position: var(--nav-position, absolute);
+    z-index: 1;
+    top: var(--nav-top, 100%);
+    right: var(--nav-right, 0);
+    left: var(--nav-left, 0);
+    display: flex;
+    flex: var(--nav-flex, initial);
+    flex-direction: var(--nav-direction, column);
+    justify-content: var(--nav-justify, normal);
+    margin-left: var(--nav-margin-left, 0);
+    background: var(--nav-background, var(--color-purple-dark));
+    visibility: var(--nav-visibility, hidden);
+    opacity: var(--nav-opacity, 0);
+    pointer-events: var(--nav-pointer-events, none);
+    transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+nav.is-open {
+    visibility: var(--nav-open-visibility, visible);
+    opacity: var(--nav-open-opacity, 1);
+    pointer-events: var(--nav-open-pointer-events, auto);
+}
+
+nav a {
+    padding: var(--nav-link-padding, 0.75rem 1rem);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--color-link-hover);
+}
+
+main {
+    width: var(--main-width, min(100% - 1.5rem, 34rem));
+    flex: 1;
+    align-self: center;
+    padding: var(--main-padding, 1.75rem 0 2.5rem);
+}
+
+h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: var(--heading-size, clamp(1.65rem, 7vw, 2.25rem));
+    font-weight: 600;
+    text-align: center;
+}
+
+.intro {
+    margin: var(--intro-margin, 0.4rem 0 1.5rem);
+    color: var(--color-intro);
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: var(--gallery-columns, 1fr);
+    gap: var(--gallery-gap, 1.25rem);
+}
+
+.temple-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    transition: var(--figure-transition, none);
+}
+
+.temple-card h2 {
+    min-height: 3.25rem;
+    margin: 0;
+    padding: 0.65rem 0.75rem 0.25rem;
+    color: var(--color-purple-dark);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.temple-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--color-image-background);
+    object-fit: cover;
+}
+
+.temple-card p {
+    margin: 0;
+    padding: 0.15rem 0.75rem;
+    text-align: center;
+}
+
+.temple-card p:last-child {
+    padding-bottom: 0.75rem;
+}
+
+footer {
+    padding: 0.85rem 1rem;
+    color: var(--color-white);
+    background: var(--color-purple);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.1rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+}
+
+#ultimaModificacao {
+    color: var(--color-focus);
+    font-size: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
