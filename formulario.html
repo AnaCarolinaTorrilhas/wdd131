@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avalie os produtos e o atendimento da Açaiteira My Dream.">
+    <meta name="author" content="Ana Carolina da Silva Torrilhas">
+    <title>Avaliação de produto | Açaiteira My Dream</title>
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <a class="brand" href="projeto/planejamentodosite.html">Açaiteira <strong>My Dream</strong></a>
+        <p>WDD 131 · Avaliação de produto</p>
+    </header>
+
+    <main id="conteudo">
+        <h1 id="titulo-formulario">Avalie sua experiência</h1>
+        <p class="intro">Conte como foi sua visita ou pedido. Sua opinião ajuda a Açaiteira My Dream a melhorar.</p>
+
+        <form method="get" action="avaliacao.html" aria-labelledby="titulo-formulario">
+            <label for="produto">Qual produto você experimentou?</label>
+            <select id="produto" name="produto" required>
+                <option value="" selected disabled>Selecione um produto</option>
+                <option value="acai-tradicional">Açaí tradicional</option>
+                <option value="acai-com-frutas">Açaí com frutas</option>
+                <option value="acai-complementos">Açaí com complementos</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <fieldset>
+                <legend>Como você avalia sua experiência?</legend>
+                <label for="nota-1"><input id="nota-1" name="avaliacao" type="radio" value="1" required> 1 - Ruim</label>
+                <label for="nota-2"><input id="nota-2" name="avaliacao" type="radio" value="2"> 2 - Regular</label>
+                <label for="nota-3"><input id="nota-3" name="avaliacao" type="radio" value="3"> 3 - Boa</label>
+                <label for="nota-4"><input id="nota-4" name="avaliacao" type="radio" value="4"> 4 - Muito boa</label>
+                <label for="nota-5"><input id="nota-5" name="avaliacao" type="radio" value="5"> 5 - Excelente</label>
+            </fieldset>
+
+            <label for="data-visita">Em que data você visitou ou fez seu pedido?</label>
+            <input id="data-visita" name="data-visita" type="date" required>
+
+            <fieldset>
+                <legend>O que você mais gostou? (selecione todas as opções aplicáveis)</legend>
+                <label for="gostei-sabor"><input id="gostei-sabor" name="destaques" type="checkbox" value="sabor"> Sabor do açaí</label>
+                <label for="gostei-acompanhamentos"><input id="gostei-acompanhamentos" name="destaques" type="checkbox" value="acompanhamentos"> Variedade de acompanhamentos</label>
+                <label for="gostei-porcao"><input id="gostei-porcao" name="destaques" type="checkbox" value="porcao"> Tamanho da porção</label>
+                <label for="gostei-atendimento"><input id="gostei-atendimento" name="destaques" type="checkbox" value="atendimento"> Atendimento</label>
+            </fieldset>
+
+            <label for="comentario">Deixe um comentário (opcional)</label>
+            <textarea id="comentario" name="comentario" rows="5" maxlength="500" placeholder="Conte o que achou..."></textarea>
+
+            <button type="submit">Enviar avaliação</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p><a href="projeto/planejamentodosite.html">Voltar ao planejamento do site</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+:root {
+    --purple: #2b0738;
+    --magenta: #9d147f;
+    --blush: #f6d7f3;
+    --cream: #fff9f1;
+    --ink: #302236;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--cream);
+    font: 1rem/1.6 Arial, sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    padding: 0.6rem;
+    color: #ffffff;
+    background: var(--purple);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.site-header,
+.site-footer {
+    padding: 1rem max(1rem, calc((100% - 44rem) / 2));
+    color: #ffffff;
+    background: var(--purple);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+.brand {
+    color: inherit;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand strong {
+    color: #f6a8ee;
+}
+
+main {
+    width: min(100% - 2rem, 42rem);
+    margin: 2.5rem auto;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    color: var(--purple);
+}
+
+.intro {
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: grid;
+    gap: 0.8rem;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid var(--blush);
+    border-radius: 0.8rem;
+    background: #ffffff;
+}
+
+label,
+legend {
+    color: var(--purple);
+    font-weight: 700;
+}
+
+fieldset {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--blush);
+    border-radius: 0.5rem;
+}
+
+fieldset label {
+    color: var(--ink);
+    font-weight: 400;
+}
+
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #8a7b8d;
+    border-radius: 0.4rem;
+    color: var(--ink);
+    background: #ffffff;
+    font: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--magenta);
+}
+
+button {
+    justify-self: start;
+    padding: 0.7rem 1.2rem;
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    background: var(--purple);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--magenta);
+}
+
+a {
+    color: var(--magenta);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--magenta);
+    outline-offset: 2px;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+@media (max-width: 38rem) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
