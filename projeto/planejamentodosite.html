@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="planejamento.css">
+    <script src="avaliacao.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -40,7 +41,7 @@
             <a href="#cores">Cores</a>
             <a href="#tipografia">Tipografia</a>
             <a href="#wireframes">Wireframes</a>
-            <a href="avaliacao.html">Avalie a experiência</a>
+            <a href="#avaliacao">Avalie a experiência</a>
         </nav>
 
         <section class="plan-section" id="nome" aria-labelledby="nome-heading">
@@ -171,6 +172,57 @@
                     </div>
                 </figure>
             </div>
+        </section>
+
+        <section class="plan-section" id="avaliacao" aria-labelledby="avaliacao-heading">
+            <p class="section-number">07 · Feedback</p>
+            <h2 id="avaliacao-heading">Avalie sua experiência</h2>
+            <p>Conte como foi sua visita ou pedido. Sua opinião ajuda a Açaiteira My Dream a melhorar.</p>
+            <form class="review-form" method="get" action="avaliacao.html" aria-labelledby="avaliacao-heading">
+                <div class="form-field">
+                    <label for="produto">Qual produto você experimentou?</label>
+                    <select id="produto" name="produto" required>
+                        <option value="" selected disabled>Selecione um produto</option>
+                        <option value="acai-tradicional">Açaí tradicional</option>
+                        <option value="acai-com-frutas">Açaí com frutas</option>
+                        <option value="acai-complementos">Açaí com complementos</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-field">
+                    <legend>Como você avalia sua experiência?</legend>
+                    <div class="choice-list">
+                        <label class="choice" for="nota-1"><input id="nota-1" name="avaliacao" type="radio" value="1" required> 1 - Ruim</label>
+                        <label class="choice" for="nota-2"><input id="nota-2" name="avaliacao" type="radio" value="2"> 2 - Regular</label>
+                        <label class="choice" for="nota-3"><input id="nota-3" name="avaliacao" type="radio" value="3"> 3 - Boa</label>
+                        <label class="choice" for="nota-4"><input id="nota-4" name="avaliacao" type="radio" value="4"> 4 - Muito boa</label>
+                        <label class="choice" for="nota-5"><input id="nota-5" name="avaliacao" type="radio" value="5"> 5 - Excelente</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="data-visita">Em que data você visitou ou fez seu pedido?</label>
+                    <input id="data-visita" name="data-visita" type="date" required>
+                </div>
+
+                <fieldset class="form-field">
+                    <legend>O que você mais gostou? (selecione todas as opções aplicáveis)</legend>
+                    <div class="choice-list">
+                        <label class="choice" for="gostei-sabor"><input id="gostei-sabor" name="destaques" type="checkbox" value="sabor"> Sabor do açaí</label>
+                        <label class="choice" for="gostei-acompanhamentos"><input id="gostei-acompanhamentos" name="destaques" type="checkbox" value="acompanhamentos"> Variedade de acompanhamentos</label>
+                        <label class="choice" for="gostei-porcao"><input id="gostei-porcao" name="destaques" type="checkbox" value="porcao"> Tamanho da porção</label>
+                        <label class="choice" for="gostei-atendimento"><input id="gostei-atendimento" name="destaques" type="checkbox" value="atendimento"> Atendimento</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="comentario">Deixe um comentário (opcional)</label>
+                    <textarea id="comentario" name="comentario" rows="5" maxlength="500" placeholder="Conte o que achou..."></textarea>
+                </div>
+
+                <button class="submit-button" type="submit">Enviar avaliação</button>
+            </form>
         </section>
     </main>
 
