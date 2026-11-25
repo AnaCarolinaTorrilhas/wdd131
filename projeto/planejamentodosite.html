@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planejamento do site da Açaiteira My Dream: identidade visual, público, conteúdo, cores, tipografia e wireframes.">
+    <meta name="author" content="Ana Carolina da Silva Torrilhas">
+    <title>Planejamento do site | Açaiteira My Dream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="planejamento.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Açaiteira My Dream — início">
+            <svg class="brand-icon" viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
+                <title id="logo-title">Símbolo de uma tigela de açaí</title>
+                <path d="M9 19h30l-3 17H12L9 19Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M7 17c3-5 7 3 10-2s7 3 10-1 7 3 14-2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <path d="M17 25h14M19 30h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>Açaiteira <strong>My Dream</strong></span>
+        </a>
+        <p>Planejamento do site · WDD 131</p>
+    </header>
+
+    <main id="conteudo">
+        <section class="intro" id="inicio" aria-labelledby="titulo-principal">
+            <p class="eyebrow">Projeto de site · Cuiabá, MT</p>
+            <h1 id="titulo-principal">Planejamento do site</h1>
+            <p>Um guia para apresentar a marca, os produtos e as informações que ajudam clientes a escolher e pedir seu açaí.</p>
+        </section>
+
+        <nav class="section-nav" aria-label="Seções do planejamento">
+            <a href="#nome">Nome</a>
+            <a href="#finalidade">Finalidade</a>
+            <a href="#cenarios">Cenários</a>
+            <a href="#cores">Cores</a>
+            <a href="#tipografia">Tipografia</a>
+            <a href="#wireframes">Wireframes</a>
+        </nav>
+
+        <section class="plan-section" id="nome" aria-labelledby="nome-heading">
+            <p class="section-number">01 · Identidade</p>
+            <h2 id="nome-heading">Nome do site</h2>
+            <div class="brand-showcase">
+                <div class="brand large-brand" aria-label="Logotipo tipográfico Açaiteira My Dream">
+                    <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M9 19h30l-3 17H12L9 19Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M7 17c3-5 7 3 10-2s7 3 10-1 7 3 14-2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M17 25h14M19 30h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Açaiteira <strong>My Dream</strong></span>
+                </div>
+                <div>
+                    <h3>Açaiteira My Dream</h3>
+                    <p>O nome combina o produto principal — açaí — com “My Dream”, expressão que transmite uma experiência especial e prazerosa. O logotipo tipográfico acompanha a identidade divertida da marca, com uma tigela de açaí como símbolo.</p>
+                    <p class="domain-note"><strong>Domínio sugerido:</strong> acaiteiramydream.com.br (a disponibilidade deverá ser verificada antes do registro).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="plan-section" id="finalidade" aria-labelledby="finalidade-heading">
+            <p class="section-number">02 · Objetivo</p>
+            <h2 id="finalidade-heading">Finalidade do site</h2>
+            <p>O site será a vitrine digital da Açaiteira My Dream, em Cuiabá. Ele apresentará os sabores e tamanhos de açaí, opções de acompanhamentos, informações de contato e localização, além de orientar o cliente sobre como fazer um pedido por telefone ou WhatsApp. O conteúdo deve facilitar uma decisão rápida tanto para quem já conhece a marca quanto para quem está procurando uma açaíteria na região.</p>
+            <p class="contact-note"><strong>Dados de contato de referência:</strong> Av. das Flores, 1234, Bairro Jardim Cuiabá, Cuiabá - MT · (65) 99234-5678.</p>
+            <ul class="purpose-list">
+                <li>Conhecer o cardápio e as combinações disponíveis.</li>
+                <li>Encontrar endereço e formas de contato.</li>
+                <li>Iniciar um pedido pelo canal de atendimento informado.</li>
+            </ul>
+        </section>
+
+        <section class="plan-section" id="cenarios" aria-labelledby="cenarios-heading">
+            <p class="section-number">03 · Público</p>
+            <h2 id="cenarios-heading">Cenários</h2>
+            <p>As perguntas abaixo representam dúvidas de moradores e visitantes de Cuiabá que acessam o site pelo celular ou computador.</p>
+            <div class="scenario-grid">
+                <article class="scenario">
+                    <span class="scenario-mark" aria-hidden="true">?</span>
+                    <h3>Quais acompanhamentos posso escolher para montar meu açaí?</h3>
+                    <p>O visitante precisa consultar sabores, tamanhos e acompanhamentos antes de fazer o pedido.</p>
+                </article>
+                <article class="scenario">
+                    <span class="scenario-mark" aria-hidden="true">?</span>
+                    <h3>Como faço um pedido e onde fica a loja?</h3>
+                    <p>O cliente procura um contato rápido e o endereço para planejar a retirada ou a visita.</p>
+                </article>
+                <article class="scenario">
+                    <span class="scenario-mark" aria-hidden="true">?</span>
+                    <h3>Quais são os horários de atendimento de hoje?</h3>
+                    <p>O visitante quer confirmar se a loja está aberta antes de sair ou entrar em contato.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="plan-section" id="cores" aria-labelledby="cores-heading">
+            <p class="section-number">04 · Identidade visual</p>
+            <h2 id="cores-heading">Esquema de cores</h2>
+            <p>A paleta parte dos tons intensos de roxo e rosa presentes na arte da marca, equilibrados por um fundo claro e acolhedor. As cores abaixo também são usadas neste documento.</p>
+            <ul class="color-palette">
+                <li class="color-swatch">
+                    <span class="swatch swatch-purple" aria-hidden="true"></span>
+                    <span><strong>Roxo profundo</strong><code>#2B0738</code><small>Títulos, cabeçalho, rodapé e textos em botões.</small></span>
+                </li>
+                <li class="color-swatch">
+                    <span class="swatch swatch-pink" aria-hidden="true"></span>
+                    <span><strong>Magenta</strong><code>#9D147F</code><small>Links, destaques, bordas e detalhes da marca.</small></span>
+                </li>
+                <li class="color-swatch">
+                    <span class="swatch swatch-blush" aria-hidden="true"></span>
+                    <span><strong>Rosa suave</strong><code>#F6D7F3</code><small>Fundos de cartões e áreas de destaque.</small></span>
+                </li>
+                <li class="color-swatch">
+                    <span class="swatch swatch-cream" aria-hidden="true"></span>
+                    <span><strong>Creme</strong><code>#FFF9F1</code><small>Fundo principal para uma leitura confortável.</small></span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="plan-section" id="tipografia" aria-labelledby="tipografia-heading">
+            <p class="section-number">05 · Leitura</p>
+            <h2 id="tipografia-heading">Tipografia</h2>
+            <p>Serão usadas duas famílias tipográficas do Google Fonts, com alternativas genéricas para manter a leitura caso as fontes externas não carreguem.</p>
+            <div class="type-samples">
+                <article class="type-sample">
+                    <p class="font-label">Títulos · Poppins</p>
+                    <p class="poppins-sample">Açaí do seu jeito</p>
+                    <p>Poppins 500–800, sans-serif. Aplicada aos títulos, navegação e elementos de marca para criar uma aparência expressiva e amigável.</p>
+                </article>
+                <article class="type-sample">
+                    <p class="font-label">Texto · Nunito Sans</p>
+                    <p class="nunito-sample">Sabor que conquista a cada colher.</p>
+                    <p>Nunito Sans 400–700, sans-serif. Aplicada a parágrafos, descrições e informações funcionais, priorizando conforto de leitura.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="plan-section" id="wireframes" aria-labelledby="wireframes-heading">
+            <p class="section-number">06 · Estrutura</p>
+            <h2 id="wireframes-heading">Wireframes da página inicial</h2>
+            <p>Os blocos representam a hierarquia e a disposição do conteúdo, sem definir textos ou imagens finais. No celular, as seções ficam em coluna; em telas maiores, o conteúdo principal pode ocupar duas colunas.</p>
+            <div class="wireframe-grid">
+                <figure class="wireframe-figure">
+                    <figcaption>Visualização móvel</figcaption>
+                    <div class="wireframe mobile-wireframe" aria-label="Wireframe móvel: cabeçalho, navegação, imagem principal, chamada para pedido, cardápio, localização e rodapé em uma coluna">
+                        <div class="wf-header"><span>LOGO</span><span class="wf-menu">☰</span></div>
+                        <div class="wf-nav">NAVEGAÇÃO</div>
+                        <div class="wf-hero"><span>IMAGEM DO AÇAÍ</span><strong>CHAMADA PRINCIPAL</strong><span>Botão: Faça seu pedido</span></div>
+                        <div class="wf-block">DESTAQUES DO CARDÁPIO</div>
+                        <div class="wf-block">ACOMPANHAMENTOS</div>
+                        <div class="wf-block">ENDEREÇO E CONTATO</div>
+                        <div class="wf-footer">RODAPÉ</div>
+                    </div>
+                </figure>
+                <figure class="wireframe-figure">
+                    <figcaption>Visualização desktop ampla</figcaption>
+                    <div class="wireframe desktop-wireframe" aria-label="Wireframe desktop: cabeçalho com navegação, imagem e chamada principal em duas colunas, cardápio, acompanhamentos, contato e rodapé">
+                        <div class="wf-header"><span>LOGO</span><span>NAVEGAÇÃO</span></div>
+                        <div class="wf-hero"><span>IMAGEM DO AÇAÍ</span><strong>CHAMADA PRINCIPAL<br>Botão: Faça seu pedido</strong></div>
+                        <div class="wf-wide-block">DESTAQUES DO CARDÁPIO</div>
+                        <div class="wf-columns">
+                            <div class="wf-block">ACOMPANHAMENTOS</div>
+                            <div class="wf-block">ENDEREÇO E CONTATO</div>
+                        </div>
+                        <div class="wf-footer">RODAPÉ</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Açaiteira My Dream · Planejamento do site · WDD 131</p>
+    </footer>
+</body>
+</html>
